@@ -42,8 +42,8 @@ case ${CentOSX} in
    done
    ;;
   8)
-   centos7Version=(8.0.1905 8.1.1911 8.2.2004 8.3.2011 8.4.2105 8.5.2111)
-   for version in ${centos7Version[*]}
+   centos8Version=(8.0.1905 8.1.1911 8.2.2004 8.3.2011 8.4.2105 8.5.2111)
+   for version in ${centos8Version[*]}
    do
      echo -e "${version}:\n"
      curl -sk --retry 3 "https://vault.centos.org/${version}/BaseOS/x86_64/os/Packages/" | grep -o "href=\"kernel-devel.*rpm\">" |grep -oE "[0-9].*x86_64"
